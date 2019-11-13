@@ -7,10 +7,10 @@ require 'directors_database'
 
 def directors_totals(nds)
   result = {}
-  #vm = nds
+  vm = directors_database
   outer = 0 
-  while outer < nds.length do
-    result[nds[outer][:name]] = gross_for_director(nds[outer])
+  while outer < vm.length do
+    result[vm[outer][:name]] = gross_for_director(vm[outer])
     outer += 1 
   end
   return result
